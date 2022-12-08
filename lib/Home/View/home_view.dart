@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:nba/Home/Model/home_model.dart';
 import 'package:nba/Home/Service/home_service.dart';
+import 'package:nba/Home/Widgets/team_card_widget.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
@@ -14,8 +15,8 @@ class HomeView extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
-          backgroundColor: Color.fromRGBO(29, 66, 138, 1),
-          title: Text("NBA"),
+          backgroundColor: const Color.fromRGBO(29, 66, 138, 1),
+          title: const Text("NBA"),
         ),
         body: SafeArea(
           child: FutureBuilder(
@@ -26,9 +27,8 @@ class HomeView extends StatelessWidget {
                 return ListView.builder(
                   itemCount: teams.length,
                   itemBuilder: (BuildContext context, int index) {
-                    return Card(
-                      child:
-                          ListTile(title: Text(teams[index].name.toString())),
+                    return TeamCardWidget(
+                      teams: teams[index],
                     );
                   },
                 );
