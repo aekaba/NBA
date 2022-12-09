@@ -1,30 +1,6 @@
 // ignore_for_file: unnecessary_new, prefer_collection_literals, unnecessary_this
 
 class GamesModel {
-  List<Data>? data;
-
-  GamesModel({this.data});
-
-  GamesModel.fromJson(Map<String, dynamic> json) {
-    if (json['data'] != null) {
-      data = <Data>[];
-      json['data'].forEach((v) {
-        data!.add(new Data.fromJson(v));
-      });
-    }
-  }
-
-  Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    if (this.data != null) {
-      data['data'] = this.data!.map((v) => v.toJson()).toList();
-    }
-
-    return data;
-  }
-}
-
-class Data {
   int? id;
   String? date;
   HomeTeam? homeTeam;
@@ -37,7 +13,7 @@ class Data {
   HomeTeam? visitorTeam;
   int? visitorTeamScore;
 
-  Data(
+  GamesModel(
       {this.id,
       this.date,
       this.homeTeam,
@@ -50,7 +26,7 @@ class Data {
       this.visitorTeam,
       this.visitorTeamScore});
 
-  Data.fromJson(Map<String, dynamic> json) {
+  GamesModel.fromJson(Map<String, dynamic> json) {
     id = json['id'];
     date = json['date'];
     homeTeam = json['home_team'] != null

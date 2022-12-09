@@ -23,6 +23,10 @@ class TeamCardWidget extends StatelessWidget {
         child: ListTile(
           title: Text(teams.name.toString()),
           subtitle: Text(teams.abbreviation.toString()),
+          leading: Image.asset(
+            "assets/teamLogos/${teams.name}.png",
+            width: MediaQuery.of(context).size.width * .2,
+          ),
         ),
       ),
     );
