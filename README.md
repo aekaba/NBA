@@ -1,16 +1,7 @@
-# nba
+# NBA APP
 
-A new Flutter project.
+NBA maç sonuçlarını takip edebileceğiniz bir uygulama
 
-## Getting Started
+API : https://www.balldontlie.io/home.html#introduction
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![NBA APP](https://user-images.githubusercontent.com/77061766/224702298-ceff12f5-be52-4723-8c37-6676442ef209.png)
